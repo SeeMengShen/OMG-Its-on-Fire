@@ -21,13 +21,11 @@ public class Interactables : MonoBehaviour
 
     public void highlight()
     {
-        Debug.Log(1);
         outline.eraseRenderer = false;
     }
 
     public void quitHighlight()
     {
-        Debug.Log(0);
         outline.eraseRenderer = true;
     }
 }
