@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Outline))]
 public class Interactables : MonoBehaviour
 {
     private Outline outline;
