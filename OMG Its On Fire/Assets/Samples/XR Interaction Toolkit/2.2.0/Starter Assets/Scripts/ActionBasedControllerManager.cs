@@ -22,7 +22,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
         [Space]
         [Header("Interactors")]
-
         [SerializeField]
         [Tooltip("The GameObject containing the interactor used for direct manipulation.")]
         XRDirectInteractor m_DirectInteractor;

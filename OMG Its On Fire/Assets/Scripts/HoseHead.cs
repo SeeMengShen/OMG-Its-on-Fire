@@ -3,38 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class HoseHead : MonoBehaviour
+public class HoseHead : Usable
 {
     private bool attachedToHydrant = false;
     private ParticleSystem childPS;
-    public ActionBasedController controller;
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         childPS = GetComponentInChildren<ParticleSystem>();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected void Update()
     {
-        
+        base.Update();
     }
 
-    public void emitWater(bool activate)
+    public void EmitWater(ActionBasedController controller)
     {
-        if(activate && attachedToHydrant)
+        if (!grabbed)
+        {
+            return;
+        }
+
+        isUsing = !isUsing;
+
+        if (isUsing && attachedToHydrant)
         {
             childPS.Play();
-            controller.SendHapticImpulse(1.0f, 0.1f);
-        }
-        else
-        {
-            childPS.Stop();
+            base.StartCoroutine(ContinuousHapticFeedback(controller, childPS));
         }
     }
 
-    public void attach(bool attach)
+    public void Attach(bool attach)
     {
         attachedToHydrant = attach;
     }

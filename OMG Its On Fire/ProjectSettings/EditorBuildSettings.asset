@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/FireFighterOutdoor.unity
+    guid: 9dc5578d998d657448887a6575557554
+  - enabled: 1
+    path: Assets/Scenes/FireFighterIndoor.unity
+    guid: b75be70609555f046b44f6b87a23deda
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3aaa94ed27989294c8860035c909ef06, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 88f1b3a7219f9af498ded4136ad4f593, type: 2}
