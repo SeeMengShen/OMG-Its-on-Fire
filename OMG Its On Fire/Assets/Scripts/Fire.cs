@@ -28,16 +28,30 @@ public class Fire : QuestItem
 
         if (life < 0)
         {
-            Complete();
-            allowEntry.questItemsCount--;
-            allowEntry.CheckQeustItemsCount();
-            Destroy(gameObject);            
+            if(QuestManager.Instance != null)
+            {
+                Complete();
+                allowEntry.questItemsCount--;
+                allowEntry.CheckQeustItemsCount();
+                Destroy(gameObject);
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }           
+                  
         }
     }
 
     private void UpdateHealthBar()
     {
-        Debug.Log(((float)life / maxLife));
         healthbar.localScale = new Vector3((float)life / maxLife, 1f, 1f);
+    }
+
+    public void ResetFire()
+    {
+        life = maxLife;
+        UpdateHealthBar();
+        gameObject.SetActive(true);
     }
 }
