@@ -104,7 +104,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 468365138120835908}
         m_TargetAssemblyTypeName: Axe, Assembly-CSharp
-        m_MethodName: swing
+        m_MethodName: Swing
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -212,7 +212,7 @@ AudioSource:
   m_GameObject: {fileID: 468365138120835912}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 362416998692396239, guid: f68aa1c7ce76fdd4ea52c52c3a3c4a5e, type: 2}
   m_audioClip: {fileID: 8300000, guid: f8f358999dbd7ee4280ede4cd6c77c6c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -558,6 +558,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &468365138248279665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468365138248245443}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722cef8acbb1460498e280fadcf57235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &468365138248279677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -695,15 +707,3 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &468365138248279665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468365138248245443}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 722cef8acbb1460498e280fadcf57235, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

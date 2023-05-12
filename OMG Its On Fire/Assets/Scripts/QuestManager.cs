@@ -9,6 +9,7 @@ public class QuestManager : MonoBehaviour
     public Quest[] questList;
     private int currentQIndex = 0;
     public Quest currentQuest;
+    public GameObject doneCanvas;
 
     public TextMeshProUGUI questTitle;
     public TextMeshProUGUI questDescription;
@@ -40,12 +41,6 @@ public class QuestManager : MonoBehaviour
         LoadQuest();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void SetQuest(Quest newQuest)
     {
         currentQuest = newQuest;
@@ -69,6 +64,7 @@ public class QuestManager : MonoBehaviour
             questStatus.text = COMPLETE_STR;
             ChangeTextColor(Color.green);
             currentQIndex++;
+            print(currentQIndex);
             Instance.StartCoroutine(DelaySwitchQuest());
         }
         else
@@ -81,7 +77,16 @@ public class QuestManager : MonoBehaviour
     {
         yield return wait;
         ChangeTextColor(Color.white);
-        SetQuest(questList[currentQIndex]);
+
+        if(currentQIndex < questList.Length)
+        {
+            SetQuest(questList[currentQIndex]);
+        }
+        else
+        {
+            doneCanvas.SetActive(true);
+        }
+        
     }
 
     private void ChangeTextColor(Color color)

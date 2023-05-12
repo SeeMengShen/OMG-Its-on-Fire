@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Fire : QuestItem
 {
@@ -8,6 +9,9 @@ public class Fire : QuestItem
     public int maxLife;
     public Transform healthbar;
     public AllowEntry allowEntry;
+
+    private const string R_SCENE_NAME = "Resident";
+    private const string FFO_SCENE_NAME = "FireFighterOutdoor";
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +34,17 @@ public class Fire : QuestItem
         {
             if(QuestManager.Instance != null)
             {
-                Complete();
-                allowEntry.questItemsCount--;
-                allowEntry.CheckQeustItemsCount();
+                if(SceneManager.GetActiveScene().name == R_SCENE_NAME || SceneManager.GetActiveScene().name == FFO_SCENE_NAME)
+                {
+                    Complete();
+
+                    if (allowEntry != null)
+                    {
+                        allowEntry.questItemsCount--;
+                        allowEntry.CheckQeustItemsCount();
+                    }
+                }                
+                
                 Destroy(gameObject);
             }
             else

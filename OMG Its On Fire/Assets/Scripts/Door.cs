@@ -11,6 +11,7 @@ public class Door : MonoBehaviour
     private const string AXE_STR = "Axe";    
     private bool isOpen;
     private AudioSource audioSource;
+    public bool locked;
     public AudioClip destroySound;
 
     // Start is called before the first frame update
@@ -29,6 +30,11 @@ public class Door : MonoBehaviour
 
     public void OpenDoor()
     {
+        if(locked)
+        {
+            return;
+        }
+
         if (!audioSource.isPlaying)
         {
             audioSource.Play();
@@ -40,6 +46,12 @@ public class Door : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(AXE_STR))
         {
+            QuestItem questItem = GetComponent<QuestItem>();
+           if(questItem != null)
+            {
+                questItem.Complete();
+            }
+
             GetComponent<Rigidbody>().isKinematic = false;
             audioSource.clip = destroySound;
             audioSource.Play();

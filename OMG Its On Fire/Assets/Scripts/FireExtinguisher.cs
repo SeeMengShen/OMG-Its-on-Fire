@@ -35,15 +35,4 @@ public class FireExtinguisher : Usable
             base.StartCoroutine(ContinuousHapticFeedback(controller, ps));
         }
     }
-
-/*    IEnumerator continuousHapticFeedback(ActionBasedController controller)
-    {
-        while(isUsing)
-        {
-            controller.SendHapticImpulse(1.0f, 0.1f);
-            yield return new WaitForSeconds(0.1f);
-        }
-        ps.Stop();
-        yield break;
-    }*/
 }

@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class Victim : QuestItem
 {
+    private bool rescued;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rescued = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public override void Complete()
     {
-        base.Complete();
-        GetComponent<Animator>().SetBool("rescued", true);
-        StartCoroutine(DelayDestroy());
+        if (!rescued)
+        {
+            base.Complete();
+            rescued = true;
+            GetComponent<Animator>().SetBool("rescued", rescued);
+            StartCoroutine(DelayDestroy());
+        }
+
     }
 
     IEnumerator DelayDestroy()
