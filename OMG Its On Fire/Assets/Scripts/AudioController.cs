@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
+    public static AudioController Instance;
 
     [SerializeField]
     private AudioProfiles m_Profiles;
@@ -13,6 +14,15 @@ public class AudioController : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+
         if (m_Profiles != null)
             m_Profiles.SetProfiles(m_Profiles);
     }

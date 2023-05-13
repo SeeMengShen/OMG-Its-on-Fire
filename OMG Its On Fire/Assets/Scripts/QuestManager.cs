@@ -64,7 +64,6 @@ public class QuestManager : MonoBehaviour
             questStatus.text = COMPLETE_STR;
             ChangeTextColor(Color.green);
             currentQIndex++;
-            print(currentQIndex);
             Instance.StartCoroutine(DelaySwitchQuest());
         }
         else

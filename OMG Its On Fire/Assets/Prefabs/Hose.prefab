@@ -5529,6 +5529,7 @@ GameObject:
   - component: {fileID: 8264652660894739969}
   - component: {fileID: 8264652660894739972}
   - component: {fileID: 8264652660894739996}
+  - component: {fileID: 5810598432770693617}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -5768,6 +5769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36d571f8641fba544acb3f4affca92fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 5810598432770693617}
 --- !u!145 &8264652660894739996
 SpringJoint:
   m_ObjectHideFlags: 0
@@ -5792,6 +5794,102 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!82 &5810598432770693617
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8264652660894739974}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 362416998692396239, guid: f68aa1c7ce76fdd4ea52c52c3a3c4a5e, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 121b2f0508ed6f44683aca6e96f8970d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8264652660924256397
 GameObject:
   m_ObjectHideFlags: 0
@@ -7249,6 +7347,7 @@ GameObject:
   - component: {fileID: 8264652661819006661}
   - component: {fileID: 8264652661819006658}
   - component: {fileID: 8264652661819006657}
+  - component: {fileID: 8035572718613768394}
   m_Layer: 0
   m_Name: Sphere (19)
   m_TagString: Untagged
@@ -7374,6 +7473,18 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &8035572718613768394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8264652661819006663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2dbe267f3a740419e90f515ce53821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8264652661824924882
 GameObject:
   m_ObjectHideFlags: 0
@@ -7944,6 +8055,7 @@ GameObject:
   - component: {fileID: 8264652662203006835}
   - component: {fileID: 8264652662203006832}
   - component: {fileID: 8264652662203006799}
+  - component: {fileID: 716089180306782647}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -8141,6 +8253,18 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &716089180306782647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8264652662203006837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2dbe267f3a740419e90f515ce53821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8264652662387728946
 GameObject:
   m_ObjectHideFlags: 0
