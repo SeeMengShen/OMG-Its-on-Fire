@@ -11,12 +11,6 @@ public class Victim : QuestItem
         rescued = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public override void Complete()
     {
         if (!rescued)
@@ -26,7 +20,6 @@ public class Victim : QuestItem
             GetComponent<Animator>().SetBool("rescued", rescued);
             StartCoroutine(DelayDestroy());
         }
-
     }
 
     IEnumerator DelayDestroy()

@@ -33,8 +33,6 @@ public class PlugManager : MonoBehaviour
             xrSocket[i] = gameObject.GetComponent<XRSocketInteractor>();
         }
 
-
-
         plugOnExtentionCount = 0;
         foreach (var socket in xrSocket)
         {
@@ -44,7 +42,6 @@ public class PlugManager : MonoBehaviour
             }
         }
     }
-
 
     public void PlugOrUnplug()
     {

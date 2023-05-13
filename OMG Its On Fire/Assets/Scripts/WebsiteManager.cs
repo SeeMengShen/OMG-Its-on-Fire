@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.TextCore.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -56,7 +55,6 @@ public class WebsiteManager : QuestItem
         image.color = Color.white;
     }
 
-
     public void WaterClicked()
     {
         descText.text = WATER_DESC;
@@ -73,7 +71,6 @@ public class WebsiteManager : QuestItem
         image.color = Color.white;
     }
 
-
     public void WetChemicalClicked()
     {
         descText.text = WET_CHEMICAL_DESC;
@@ -88,7 +85,6 @@ public class WebsiteManager : QuestItem
         //check is kitchen or not
         if (selectedFireExtinguisher == (int)FireExtinguisherType.wetChemical && !done)
         {
-            //boughtFireExtinguisher = Instantiate(fireExtinguisherPrefab, new Vector3(4.3f, 0.388f, 1.55f), Quaternion.Euler(-90, 0, 0));
             newFE.SetActive(true);
 
             Complete();

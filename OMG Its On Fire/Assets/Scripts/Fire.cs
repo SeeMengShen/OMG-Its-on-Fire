@@ -19,12 +19,6 @@ public class Fire : QuestItem
         maxLife = life;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnParticleCollision(GameObject other)
     {
         life--;

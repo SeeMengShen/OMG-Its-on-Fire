@@ -12,15 +12,8 @@ public class AllowEntry : MonoBehaviour
     void Start()
     {
         transforms = GetComponentsInChildren<Fire>();
-        //Transform[] transforms = GetComponentsInChildren<Transform>();
 
         questItemsCount = transforms.Length;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void CheckQeustItemsCount()

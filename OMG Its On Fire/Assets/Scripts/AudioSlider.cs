@@ -40,11 +40,6 @@ public class AudioSlider : MonoBehaviour
 
     public void UpdateValueOnChange(float value)
     {
-        /*
-        if(Settings.profile && Settings.profile.audioMixer)
-            Settings.profile.audioMixer.SetFloat(volumeName, Mathf.Log(value)*20f);
-        */
-
         if (volumeLabel != null)
             volumeLabel.text = Mathf.Round(value * 100.0f).ToString() + "%";
 
